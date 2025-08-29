@@ -6,8 +6,6 @@ Check the book online [book](https://quii.gitbook.io/learn-go-with-tests)
 
 > I'm just bored and trying to improve my language skills while doing some tests.
 
-I can't express my gratitude enough to persons who make such and effort and leave it to the public.
-
-> I can't express my gratitude enough to the people who put in so much effort and left it in the hands of the public. To all of you "gracias totales" @quii
+I can't express my gratitude enough to persons who make such and effort and leave it to the public. To all of you "gracias totales" @quii
 
 ![ghops](assets/goph.avif)
