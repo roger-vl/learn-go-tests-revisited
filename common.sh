@@ -1,13 +1,12 @@
 #!/bin/bash
 
-echo "create base files"
-read -p "name: " name
+echo "creating base files.. ${1}"
 
-file="$name/${name}.go"
-file_test="$name/${name}_test.go"
+file="$1/${1}.go"
+file_test="$1/${1}_test.go"
 
-mkdir "$name"
+mkdir "$1"
 touch $file
 touch ${file_test}
-echo "package $name" >$file
-echo "package $name" >$file_test
+echo -e "package $1\n\n/* Key ideas:\n*\n*\n */" >$file
+echo -e "package $1\n\n/* Key ideas:\n*\n*\n */" >$file_test
