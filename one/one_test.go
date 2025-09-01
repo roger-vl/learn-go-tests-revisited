@@ -87,3 +87,10 @@ func assertCorrectMsg(t testing.TB, when, got, want string) {
 		t.Errorf("when %q got %q want %q", when, got, want)
 	}
 }
+
+/* Wrapping up:
+* TDD process:
+* - validate that the error messages are clear
+* - make it run before changes
+* - once is run change it, refactor it with tests that helps if something goes wrong
+* */
