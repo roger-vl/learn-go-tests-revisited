@@ -14,9 +14,10 @@ import "strings"
 *
  */
 
-func Repeater(digit string) string {
+func Repeater(digit string, times int) string {
 	var repeated strings.Builder
-	for i := 0; i < 5; i++ {
+	// for i := 0; i < times; i++ { old way
+	for range times { // new way
 		repeated.WriteString(digit)
 	}
 	return repeated.String()
