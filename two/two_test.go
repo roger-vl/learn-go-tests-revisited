@@ -1,13 +1,17 @@
 package two
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 /* Key ideas:
 *
+* - We can have examples as part of the testing files
+* automatically added to docs and running along the actual tests
+*
 * Requirement: add two numbers
-*
-*
-*
+* New requirement: add an example
 *
  */
 
@@ -18,4 +22,10 @@ func TestAdd(t *testing.T) {
 	if result != expected {
 		t.Errorf("expected '%d' but result '%d'", expected, result)
 	}
+}
+
+func ExampleAddSomething() {
+	result := AddSomething(1, 5)
+	fmt.Println(result)
+	// output: 6
 }
