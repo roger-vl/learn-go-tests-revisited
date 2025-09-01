@@ -32,17 +32,32 @@ func TestGreeting(t *testing.T) {
 // New requirement: when is called empty should say "some hello there, world"
 //
 // Refactor after running with default for string empty
+//
+// New requirement: support a second parameter, specifying the language of the greeting
+// - if language is not supported default to English
 
 func TestGreetingRecipient(t *testing.T) {
 	t.Run("say hello to recipient", func(t *testing.T) {
-		got := hello_args("buddy")
+		got := hello_args("buddy", "en")
 		want := "some hello there, buddy"
 		assertCorrectMsg(t, got, want)
 	})
 
 	t.Run("say hello default to world", func(t *testing.T) {
-		got := hello_args("")
+		got := hello_args("", "en")
 		want := "some hello there, world"
+		assertCorrectMsg(t, got, want)
+	})
+
+	t.Run("say hello in Spanish", func(t *testing.T) {
+		got := hello_args("Pepe", "es")
+		want := "hola tu, Pepe"
+		assertCorrectMsg(t, got, want)
+	})
+
+	t.Run("say hello in English by default", func(t *testing.T) {
+		got := hello_args("Pepe", "gr")
+		want := "some hello there, Pepe"
 		assertCorrectMsg(t, got, want)
 	})
 }
