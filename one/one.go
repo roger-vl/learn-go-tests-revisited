@@ -19,11 +19,10 @@ package one
 *
  */
 
-type greet string
-
 const (
-	en greet = "some hello there, "
-	es greet = "hola tu, "
+	en_greet = "some hello there, "
+	es_greet = "hola tu, "
+	fr_greet = "Bonjour, "
 )
 
 func hello() string {
@@ -36,8 +35,10 @@ func hello_args(recipient, lang string) string {
 	}
 	switch lang {
 	case "es":
-		return string(es) + recipient
+		return es_greet + recipient
+	case "fr":
+		return fr_greet + recipient
 	default:
-		return string(en) + recipient
+		return en_greet + recipient
 	}
 }
