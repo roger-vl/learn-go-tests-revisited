@@ -38,6 +38,8 @@ func TestGreeting(t *testing.T) {
 //
 // New requirement: add support for french
 // - improve test message if fails
+//
+// New requirement: add support for japan
 
 func TestGreetingRecipient(t *testing.T) {
 	t.Run("say hello to recipient", func(t *testing.T) {
@@ -68,6 +70,12 @@ func TestGreetingRecipient(t *testing.T) {
 		got := hello_args("Pepe", "fr")
 		want := "Bonjour, Pepe"
 		assertCorrectMsg(t, "fr", got, want)
+	})
+
+	t.Run("say hello in Japan", func(t *testing.T) {
+		got := hello_args("Pepe", "ja")
+		want := "Konnichiwa, Pepe"
+		assertCorrectMsg(t, "ja", got, want)
 	})
 }
 

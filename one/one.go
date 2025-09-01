@@ -23,6 +23,7 @@ const (
 	en_greet = "some hello there, "
 	es_greet = "hola tu, "
 	fr_greet = "Bonjour, "
+	ja_greet = "Konnichiwa, "
 )
 
 func hello() string {
@@ -38,6 +39,8 @@ func hello_args(recipient, lang string) string {
 		return es_greet + recipient
 	case "fr":
 		return fr_greet + recipient
+	case "ja":
+		return ja_greet + recipient
 	default:
 		return en_greet + recipient
 	}
